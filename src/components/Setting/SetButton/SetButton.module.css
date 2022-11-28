@@ -1,0 +1,38 @@
+.control {
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 20px;
+    height: 135px;
+    border: 3px solid aquamarine;
+}
+
+.button {
+    width: 140px;
+    height: 70px;
+    margin: 30px 30px;
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
+    border-radius: 20px;
+    color: #282c34;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.button:active {
+    background-color: #282c34;
+    border: 1px solid #282c34;
+    border-radius: 20px;
+    color: aquamarine;
+}
+
+.button:disabled {
+    opacity: 0.3;
+    background-color: #61dafb;
+    border: 1px solid #61dafb;
+}
+.button:disabled:active {
+    opacity: 0.3;
+    background-color: #61dafb;
+    border: 1px solid #61dafb;
+    color: #282c34;
+}
