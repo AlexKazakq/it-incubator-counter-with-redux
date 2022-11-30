@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/it-incubator-counter-with-redux/static/css/main.96571483.css",
+    "main.js": "/it-incubator-counter-with-redux/static/js/main.4e958e8d.js",
+    "static/js/787.28cb0dcd.chunk.js": "/it-incubator-counter-with-redux/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/it-incubator-counter-with-redux/index.html",
+    "main.96571483.css.map": "/it-incubator-counter-with-redux/static/css/main.96571483.css.map",
+    "main.4e958e8d.js.map": "/it-incubator-counter-with-redux/static/js/main.4e958e8d.js.map",
+    "787.28cb0dcd.chunk.js.map": "/it-incubator-counter-with-redux/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96571483.css",
+    "static/js/main.4e958e8d.js"
+  ]
+}
