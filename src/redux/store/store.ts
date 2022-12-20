@@ -1,12 +1,9 @@
 import {stateReducer} from "./stateReducer";
-import {combineReducers, compose, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunk from "redux-thunk";
+import {loadState, saveState} from "../../utils/localstoradge-utils";
 
 
-declare global {
-    interface Window {
-        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-    }
-}
 
 // объединяя reducer-ы с помощью combineReducers,
 // мы задаём структуру нашего единственного объекта-состояния
@@ -14,9 +11,14 @@ const rootReducer = combineReducers({
     state: stateReducer
 })
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 // непосредственно создаём store
-export const store = createStore(rootReducer, composeEnhancers());
+export const store = createStore(rootReducer, loadState(), applyMiddleware(thunk),);
+
+
+store.subscribe(() => {
+    saveState(store.getState())
+})
 
 // определить автоматически тип всего объекта состояния
 export type AppRootStateType = ReturnType<typeof rootReducer>

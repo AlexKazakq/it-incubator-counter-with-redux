@@ -1,3 +1,5 @@
+
+
 export type initialStateType = {
     counter: number
     maxValue: number
@@ -8,7 +10,7 @@ export type initialStateType = {
 
 let initialState: initialStateType = {
     counter: 0,
-    maxValue: 1,
+    maxValue: 0,
     startValue: 0,
     isSetting: true,
     error: false
@@ -65,3 +67,44 @@ export const setMaxValueAC = (maxValue: number) => ({type: SET_MAX_VALUE, maxVal
 export const setStartValueAC = (startValue: number) => ({type: SET_START_VALUE, startValue} as const)
 export const setIsSettingAC = (isSetting: boolean) => ({type: SET_IS_SETTING, isSetting} as const)
 export const setErrorAC = (error: boolean) => ({type: SET_ERROR, error} as const)
+
+// export const setCounterTC = (counter: number): any => (dispatch: Dispatch) => {
+//     localStorage.setItem('counter', JSON.stringify(counter))
+//     dispatch(setCounterAC(counter))
+// }
+//
+// export const setMaxValueTC = (maxValue: number): any => (dispatch: Dispatch) => {
+//     localStorage.setItem('maxValue', JSON.stringify(maxValue))
+//     dispatch(setMaxValueAC(maxValue))
+// }
+// export const setStartValueTC = (startValue: number): any => (dispatch: Dispatch) => {
+//     localStorage.setItem('startValue', JSON.stringify(startValue))
+//     dispatch(setStartValueAC(startValue))
+// }
+//
+// export const setCounterFromLocalStorageTC = (): any => (dispatch: Dispatch) => {
+//     let valueAsString = localStorage.getItem('counter')
+//     if (valueAsString) {
+//         let newValue = JSON.parse(valueAsString)
+//         dispatch(setCounterAC(newValue))
+//     }
+// }
+//
+// export const setMaxValueFromLocalStorageTC = (): any => (dispatch: Dispatch) => {
+//     let valueAsString = localStorage.getItem('maxValue')
+//     if (valueAsString) {
+//         let newValue = JSON.parse(valueAsString)
+//         dispatch(setMaxValueAC(newValue))
+//     }
+// }
+// export const setStartValueFromLocalStorageTC = (): any => (dispatch: Dispatch) => {
+//     let valueAsString = localStorage.getItem('startValue')
+//     if (valueAsString) {
+//         let newValue = JSON.parse(valueAsString)
+//         dispatch(setStartValueAC(newValue))
+//     }
+// }
+//
+// export type CounterThunkType<ReturnType = void> = ThunkAction<ReturnType, AppRootStateType, unknown, CounterActionType>
+
+

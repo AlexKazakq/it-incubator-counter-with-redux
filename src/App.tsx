@@ -5,17 +5,24 @@ import {Setting} from "./components/Setting/Setting";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "./redux/store/store";
 import {
-    initialStateType,
-    setCounterAC, setErrorAC,
-    setIsSettingAC,
-    setMaxValueAC,
-    setStartValueAC
+    initialStateType, setCounterAC,
+    setErrorAC,
+    setIsSettingAC, setMaxValueAC, setStartValueAC,
 } from "./redux/store/stateReducer";
 
 function App() {
 
     const state = useSelector<AppRootStateType, initialStateType>(state => state.state)
     const dispatch = useDispatch()
+
+    // useEffect(() => {
+    //     dispatch(setCounterFromLocalStorageTC())
+    //     dispatch(setMaxValueFromLocalStorageTC())
+    //     dispatch(setStartValueFromLocalStorageTC())
+    //     if (localStorage.getItem('counter')) {
+    //         dispatch(setIsSettingAC(false))
+    //     }
+    // }, [])
 
     const setCounter = useCallback((counter: number) => {
         dispatch(setCounterAC(counter))

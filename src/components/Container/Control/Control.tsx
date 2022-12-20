@@ -14,7 +14,6 @@ type ControlPropsType = {
 export const Control = memo((props:ControlPropsType) => {
 
     const onClickIncHandler = useCallback(() => {
-        debugger
         props.setCounter(props.counter + 1)
     }, [props.setCounter, props.counter])
     const onClickResetHandler = useCallback(() => {
